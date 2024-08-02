@@ -1,0 +1,20 @@
+{
+  "name": "koi",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "sass --watch sass/app.scss css/app.css",
+    "build": "sass sass/app.scss css/app.css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "sass": "^1.77.8"
+  },
+  "dependencies": {
+    "p5": "^1.10.0"
+  }
+}
