@@ -1,0 +1,26 @@
+body {
+	position: relative;
+	overflow: hidden;
+	margin: 0;
+	height: 100vh;
+	font-family: Arial, sans-serif;
+	background: $background-color;
+}
+
+img {
+	width: 100%;
+}
+
+.container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.show {
+    opacity: 1 !important;
+}
+
+.hide {
+    opacity: 0 !important;
+}

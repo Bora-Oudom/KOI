@@ -1,7 +1,9 @@
 $(document).ready(function () {
-    const waveElement = $('#wave');
-    const WIN_HEIGHT = 95;
+    const waterElement = $('#water');
+    const contentSection = $('#content-section');
+    const winSection = $('#win-section');
     let audioContext;
+    const WIN_HEIGHT = 99;
     let analyser;
     let source;
     let dataArray;
@@ -16,7 +18,13 @@ $(document).ready(function () {
             audioContext = new (window.AudioContext || window.webkitAudioContext)();
             analyser = audioContext.createAnalyser();
             source = audioContext.createMediaStreamSource(stream);
-            source.connect(analyser);
+
+            // Set up gain node with a lower gain value
+            gainNode = audioContext.createGain();
+            gainNode.gain.value = 0.15;
+
+            source.connect(gainNode);
+            gainNode.connect(analyser);
 
             // Setup analyser
             analyser.fftSize = 256; // Size of the FFT (frequency domain) analysis
@@ -28,15 +36,29 @@ $(document).ready(function () {
                 analyser.getByteFrequencyData(dataArray);
 
                 // Find the maximum volume from the data array
-                const maxVolume = Math.max(...dataArray);
+                let maxVolume = Math.max(...dataArray);
 
-                const height = (maxVolume / 256) * 100; // Adjust based on viewport height
-                waveElement.css('height', height + 'vh');
+
+                const height = (maxVolume / 256) * 100 ;
+
+                waterElement.css('height', height  + 'vh');
 
                 // Check if the wave has reached the top of the screen
                 if (height >= WIN_HEIGHT) {
                     // Set wave height to viewport height
-                    waveElement.css('height', '100vh');
+                    waterElement.css('height', '100vh');
+
+                    contentSection.addClass('hide').removeClass('show');
+                    setTimeout(function() {
+                        contentSection.css('display', 'none');
+                        winSection.css('display', 'block');
+                        setTimeout(function() {
+                            winSection.addClass('show').removeClass('hide');
+                            $('body').css('background', '#646464')
+                        }, 20);
+                    }, 500);
+
+                    // Show Winning message
                     $('.win-message').show();
 
                     // Stop further processing

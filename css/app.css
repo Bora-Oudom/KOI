@@ -4,30 +4,21 @@ body {
   margin: 0;
   height: 100vh;
   font-family: Arial, sans-serif;
-  background-color: #f0f0f0;
-}
+  background: #f0f0f0; }
 
-.wave {
+img {
+  width: 100%; }
+
+.container {
   display: flex;
   flex-direction: column;
-  position: absolute;
-  overflow: hidden;
-  width: 100vw;
-  bottom: 0;
-  transition: height 0.1s;
-}
-.wave-bg {
-  background: #000;
-  height: 100%;
-  width: 100%;
-}
-.wave svg {
-  transform: rotate(180deg);
-}
+  align-items: center; }
 
-h1 {
-  display: none;
-}
+.show {
+  opacity: 1 !important; }
+
+.hide {
+  opacity: 0 !important; }
 
 #start-button {
   position: absolute;
@@ -36,7 +27,56 @@ h1 {
   transform: translate(-50%, -50%);
   padding: 20px 50px;
   font-size: 18px;
-  cursor: pointer;
-}
+  cursor: pointer; }
+
+.water {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transition: height 0.5s;
+  /* Animation */
+  /*Shrinking for mobile*/ }
+  .water-bg {
+    width: 100%;
+    height: 100%;
+    background: #646464; }
+  .water .waves {
+    width: 100vw;
+    height: 15vh;
+    margin-bottom: -4px; }
+  .water .parallax > use {
+    animation: move-forever 25s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite; }
+  .water .parallax > use:nth-child(1) {
+    animation-delay: -3s;
+    animation-duration: 20s; }
+  .water .parallax > use:nth-child(2) {
+    animation-delay: -5s;
+    animation-duration: 30s; }
+@keyframes move-forever {
+  0% {
+    transform: translate3d(-90px, 0, 0); }
+  100% {
+    transform: translate3d(85px, 0, 0); } }
+  @media (max-width: 768px) {
+    .water .waves {
+      height: 40px;
+      min-height: 40px; }
+    .water .content {
+      height: 30vh; }
+    .water h1 {
+      font-size: 24px; } }
+
+#content-section {
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out; }
+  #content-section .logo {
+    width: 500px; }
+
+#win-section {
+  opacity: 0;
+  display: none;
+  transition: opacity 0.5s ease-in-out; }
+  #win-section .logo {
+    width: 500px; }
 
 /*# sourceMappingURL=app.css.map */

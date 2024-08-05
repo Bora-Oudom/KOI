@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Screaming Game</title>
+
+		<!-- Style -->
+		<link rel="stylesheet" href="../css/app.css" />
+	</head>
+	<body>
+        <div class="container">
+            <section class="content-section" id="content-section">
+                <button id="start-button">Start</button>
+                <div class="logo">
+                    <img src="./images/koi-logo.png" alt="koi-logo">
+                </div>
+                <!--Waves Container-->
+                <div class="water" id="water">
+                    <svg
+                        class="waves"
+                        xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink"
+                        viewBox="0 24 150 28"
+                        preserveAspectRatio="none"
+                        shape-rendering="auto">
+                        <defs>
+                            <path
+                                id="gentle-wave"
+                                d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+                        </defs>
+                        <g class="parallax">
+                            <use
+                                xlink:href="#gentle-wave"
+                                x="48"
+                                y="3"
+                                fill="rgba(100,100,100,0.5)" />
+                            <use
+                                xlink:href="#gentle-wave"
+                                x="48"
+                                y="7"
+                                fill="#646464" />
+                        </g>
+                    </svg>
+                    <div class="water-bg"></div>
+                </div>
+                <!--Waves end-->
+            </section>
+
+            <section class="win-section" id="win-section">
+                <div class="logo">
+                    <img src="./images/koi-logo-02.png" alt="koi-logo-02">
+                </div>
+            </section>
+        </div>
+		<!-- Jquery -->
+		<script
+			src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+			integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"></script>
+
+		<!-- Howler JS -->
+		<script
+			src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.4/howler.min.js"
+			integrity="sha512-xi/RZRIF/S0hJ+yJJYuZ5yk6/8pCiRlEXZzoguSMl+vk2i3m6UjUO/WcZ11blRL/O+rnj94JRGwt/CHbc9+6EA=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"></script>
+
+		<script src="../js/app.js"></script>
+	</body>
+</html>
