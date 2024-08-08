@@ -1,3 +1,5 @@
+import './firebaseConfig';
+
 $(document).ready(function () {
     const waterElement = $('#water');
     const contentSection = $('#content-section');
