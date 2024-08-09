@@ -1,0 +1,182 @@
+[debug] [2024-08-09T15:34:56.650Z] ----------------------------------------------------------------------
+[debug] [2024-08-09T15:34:56.652Z] Command:       /usr/local/bin/firebase /Users/macbook/.cache/firebase/tools/lib/node_modules/firebase-tools/lib/bin/firebase deploy
+[debug] [2024-08-09T15:34:56.652Z] CLI Version:   12.4.5
+[debug] [2024-08-09T15:34:56.652Z] Platform:      darwin
+[debug] [2024-08-09T15:34:56.652Z] Node Version:  v16.16.0
+[debug] [2024-08-09T15:34:56.654Z] Time:          Fri Aug 09 2024 22:34:56 GMT+0700 (Indochina Time)
+[debug] [2024-08-09T15:34:56.655Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-08-09T15:34:56.737Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-08-09T15:34:56.737Z] > authorizing via signed-in user (boraoudom2811@gmail.com)
+[debug] [2024-08-09T15:34:56.738Z] [iam] checking project scream-game-a6327 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2024-08-09T15:34:56.739Z] > refreshing access token with scopes: []
+[debug] [2024-08-09T15:34:56.741Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2024-08-09T15:34:56.741Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2024-08-09T15:35:01.500Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2024-08-09T15:35:01.501Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2024-08-09T15:35:01.518Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/scream-game-a6327:testIamPermissions [none]
+[debug] [2024-08-09T15:35:01.518Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/scream-game-a6327:testIamPermissions x-goog-quota-user=projects/scream-game-a6327
+[debug] [2024-08-09T15:35:01.518Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/scream-game-a6327:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2024-08-09T15:35:03.499Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/scream-game-a6327:testIamPermissions 200
+[debug] [2024-08-09T15:35:03.499Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/scream-game-a6327:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2024-08-09T15:35:03.501Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/scream-game-a6327 [none]
+[debug] [2024-08-09T15:35:04.830Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/scream-game-a6327 200
+[debug] [2024-08-09T15:35:04.830Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/scream-game-a6327 {"projectId":"scream-game-a6327","projectNumber":"1005683821233","displayName":"scream-game","name":"projects/scream-game-a6327","resources":{"hostingSite":"scream-game-a6327"},"state":"ACTIVE","etag":"1_c3071c64-5b59-4703-8585-8428d6d3642c"}
+[info] 
+[info] === Deploying to 'scream-game-a6327'...
+[info] 
+[info] i  deploying hosting 
+[debug] [2024-08-09T15:35:04.837Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/scream-game-a6327/versions [none]
+[debug] [2024-08-09T15:35:04.837Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/scream-game-a6327/versions {"status":"CREATED","labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2024-08-09T15:35:07.816Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/scream-game-a6327/versions 200
+[debug] [2024-08-09T15:35:07.816Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/scream-game-a6327/versions {"name":"projects/1005683821233/sites/scream-game-a6327/versions/15372f4ea44f4caa","status":"CREATED","config":{},"labels":{"deployment-tool":"cli-firebase"}}
+[info] i  hosting[scream-game-a6327]: beginning deploy... 
+[info] i  hosting[scream-game-a6327]: found 6 files in public 
+[debug] [2024-08-09T15:35:07.826Z] [hosting] uploading with 200 concurrency
+[debug] [2024-08-09T15:35:07.845Z] [hosting] hash cache [cHVibGlj] stored for 6 files
+[debug] [2024-08-09T15:35:07.845Z] [hosting][hash queue][FINAL] {"max":11,"min":1,"avg":2.6666666666666665,"active":0,"complete":6,"success":6,"errored":0,"retried":0,"total":6,"elapsed":15}
+[debug] [2024-08-09T15:35:07.846Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/1005683821233/sites/scream-game-a6327/versions/15372f4ea44f4caa:populateFiles [none]
+[debug] [2024-08-09T15:35:07.846Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/1005683821233/sites/scream-game-a6327/versions/15372f4ea44f4caa:populateFiles {"files":{"/css/app.css":"9b4cfd2a0ac02afe26908d20e62035ad0bea611cdee75a86251841d90d5188b3","/css/app.css.map":"2ab7943088df4033a0fcd30974ef3ca4564250121ae36e528be0b61c610f01a3","/images/koi-logo-02.png":"27ae3114d27e13b1dcdfb2117876f56ca0aede592c17d408356ac06f525904f9","/images/koi-logo.png":"a51444a6761c739b8d0f7a9cc4800b03dfd2110638ff4833d91d417d6ae7e1f5","/js/app.js":"4988e28e3602c2df2a03367ad176216823669ab7f8875ad38a7f4d601c208dbd","/index.html":"cf3a2fdc4d411825af26d62a1eb2e3c55a54e840aab5ffa1af2ac38fd262dc7f"}}
+[debug] [2024-08-09T15:35:08.574Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/1005683821233/sites/scream-game-a6327/versions/15372f4ea44f4caa:populateFiles 200
+[debug] [2024-08-09T15:35:08.574Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/1005683821233/sites/scream-game-a6327/versions/15372f4ea44f4caa:populateFiles {"uploadRequiredHashes":["cf3a2fdc4d411825af26d62a1eb2e3c55a54e840aab5ffa1af2ac38fd262dc7f"],"uploadUrl":"https://upload-firebasehosting.googleapis.com/upload/sites/scream-game-a6327/versions/15372f4ea44f4caa/files"}
+[debug] [2024-08-09T15:35:08.575Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/scream-game-a6327/versions/15372f4ea44f4caa/files/cf3a2fdc4d411825af26d62a1eb2e3c55a54e840aab5ffa1af2ac38fd262dc7f [none]
+[debug] [2024-08-09T15:35:08.575Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/scream-game-a6327/versions/15372f4ea44f4caa/files/cf3a2fdc4d411825af26d62a1eb2e3c55a54e840aab5ffa1af2ac38fd262dc7f [stream]
+[debug] [2024-08-09T15:35:08.576Z] [hosting][populate queue][FINAL] {"max":732,"min":732,"avg":732,"active":0,"complete":1,"success":1,"errored":0,"retried":0,"total":1,"elapsed":733}
+[debug] [2024-08-09T15:35:08.576Z] [hosting] uploads queued: 1
+[debug] [2024-08-09T15:35:11.470Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/scream-game-a6327/versions/15372f4ea44f4caa/files/cf3a2fdc4d411825af26d62a1eb2e3c55a54e840aab5ffa1af2ac38fd262dc7f 200
+[debug] [2024-08-09T15:35:11.471Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/scream-game-a6327/versions/15372f4ea44f4caa/files/cf3a2fdc4d411825af26d62a1eb2e3c55a54e840aab5ffa1af2ac38fd262dc7f [stream]
+[debug] [2024-08-09T15:35:11.471Z] [hosting][upload queue][FINAL] {"max":2897,"min":2897,"avg":2897,"active":0,"complete":1,"success":1,"errored":0,"retried":0,"total":1,"elapsed":2897}
+[info] ✔  hosting[scream-game-a6327]: file upload complete 
+[debug] [2024-08-09T15:35:11.472Z] [hosting] deploy completed after 3654ms
+[debug] [2024-08-09T15:35:11.472Z] [
+  {
+    "config": {
+      "public": "public",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "rewrites": [
+        {
+          "source": "**",
+          "destination": "/index.html"
+        }
+      ],
+      "site": "scream-game-a6327"
+    },
+    "version": "projects/1005683821233/sites/scream-game-a6327/versions/15372f4ea44f4caa"
+  }
+]
+[info] i  hosting[scream-game-a6327]: finalizing version... 
+[debug] [2024-08-09T15:35:11.476Z] >>> [apiv2][query] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/scream-game-a6327/versions/15372f4ea44f4caa updateMask=status%2Cconfig
+[debug] [2024-08-09T15:35:11.476Z] >>> [apiv2][body] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/scream-game-a6327/versions/15372f4ea44f4caa {"status":"FINALIZED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]}}
+[debug] [2024-08-09T15:35:12.175Z] <<< [apiv2][status] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/scream-game-a6327/versions/15372f4ea44f4caa 200
+[debug] [2024-08-09T15:35:12.175Z] <<< [apiv2][body] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/scream-game-a6327/versions/15372f4ea44f4caa {"name":"projects/1005683821233/sites/scream-game-a6327/versions/15372f4ea44f4caa","status":"FINALIZED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2024-08-09T15:35:07.244474Z","createUser":{"email":"boraoudom2811@gmail.com"},"finalizeTime":"2024-08-09T15:35:11.985828Z","finalizeUser":{"email":"boraoudom2811@gmail.com"}}
+[debug] [2024-08-09T15:35:12.175Z] [hosting] finalized version for scream-game-a6327:[object Object]
+[info] ✔  hosting[scream-game-a6327]: version finalized 
+[info] i  hosting[scream-game-a6327]: releasing new version... 
+[debug] [2024-08-09T15:35:12.176Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/scream-game-a6327/channels/live/releases versionName=projects%2F1005683821233%2Fsites%2Fscream-game-a6327%2Fversions%2F15372f4ea44f4caa
+[debug] [2024-08-09T15:35:12.176Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/scream-game-a6327/channels/live/releases {}
+[debug] [2024-08-09T15:35:13.179Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/scream-game-a6327/channels/live/releases 200
+[debug] [2024-08-09T15:35:13.180Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/scream-game-a6327/channels/live/releases {"name":"projects/1005683821233/sites/scream-game-a6327/channels/live/releases/1723217712352000","version":{"name":"projects/1005683821233/sites/scream-game-a6327/versions/15372f4ea44f4caa","status":"FINALIZED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2024-08-09T15:35:07.244474Z","createUser":{"email":"boraoudom2811@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/ACg8ocIXIp2pi9b0931Gk4pmQaPGkuLLrs5VaxX9jAaMHk1H5CvHjw"},"finalizeTime":"2024-08-09T15:35:11.985828Z","finalizeUser":{"email":"boraoudom2811@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/ACg8ocIXIp2pi9b0931Gk4pmQaPGkuLLrs5VaxX9jAaMHk1H5CvHjw"}},"type":"DEPLOY","releaseTime":"2024-08-09T15:35:12.352Z","releaseUser":{"email":"boraoudom2811@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/ACg8ocIXIp2pi9b0931Gk4pmQaPGkuLLrs5VaxX9jAaMHk1H5CvHjw"}}
+[debug] [2024-08-09T15:35:13.180Z] [hosting] release: {"name":"projects/1005683821233/sites/scream-game-a6327/channels/live/releases/1723217712352000","version":{"name":"projects/1005683821233/sites/scream-game-a6327/versions/15372f4ea44f4caa","status":"FINALIZED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2024-08-09T15:35:07.244474Z","createUser":{"email":"boraoudom2811@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/ACg8ocIXIp2pi9b0931Gk4pmQaPGkuLLrs5VaxX9jAaMHk1H5CvHjw"},"finalizeTime":"2024-08-09T15:35:11.985828Z","finalizeUser":{"email":"boraoudom2811@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/ACg8ocIXIp2pi9b0931Gk4pmQaPGkuLLrs5VaxX9jAaMHk1H5CvHjw"}},"type":"DEPLOY","releaseTime":"2024-08-09T15:35:12.352Z","releaseUser":{"email":"boraoudom2811@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/ACg8ocIXIp2pi9b0931Gk4pmQaPGkuLLrs5VaxX9jAaMHk1H5CvHjw"}}
+[info] ✔  hosting[scream-game-a6327]: release complete 
+[info] 
+[info] ✔  Deploy complete! 
+[info] 
+[info] Project Console: https://console.firebase.google.com/project/scream-game-a6327/overview
+[info] Hosting URL: https://scream-game-a6327.web.app
+[debug] [2024-08-09T15:35:18.502Z] Error: Timed out.
+    at Timeout.<anonymous> (/Users/macbook/.cache/firebase/tools/lib/node_modules/firebase-tools/lib/utils.js:254:49)
+    at listOnTimeout (node:internal/timers:559:17)
+    at processTimers (node:internal/timers:502:7)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2024-08-09T16:00:38.350Z] ----------------------------------------------------------------------
+[debug] [2024-08-09T16:00:38.352Z] Command:       /usr/local/bin/firebase /Users/macbook/.cache/firebase/tools/lib/node_modules/firebase-tools/lib/bin/firebase deploy
+[debug] [2024-08-09T16:00:38.353Z] CLI Version:   12.4.5
+[debug] [2024-08-09T16:00:38.353Z] Platform:      darwin
+[debug] [2024-08-09T16:00:38.353Z] Node Version:  v16.16.0
+[debug] [2024-08-09T16:00:38.356Z] Time:          Fri Aug 09 2024 23:00:38 GMT+0700 (Indochina Time)
+[debug] [2024-08-09T16:00:38.356Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-08-09T16:00:38.360Z] >>> [apiv2][query] GET https://firebase-public.firebaseio.com/cli.json [none]
+[debug] [2024-08-09T16:00:38.462Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-08-09T16:00:38.462Z] > authorizing via signed-in user (boraoudom2811@gmail.com)
+[debug] [2024-08-09T16:00:38.463Z] [iam] checking project scream-game-a6327 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2024-08-09T16:00:38.464Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/scream-game-a6327:testIamPermissions [none]
+[debug] [2024-08-09T16:00:38.464Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/scream-game-a6327:testIamPermissions x-goog-quota-user=projects/scream-game-a6327
+[debug] [2024-08-09T16:00:38.465Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/scream-game-a6327:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2024-08-09T16:00:44.012Z] <<< [apiv2][status] GET https://firebase-public.firebaseio.com/cli.json 200
+[debug] [2024-08-09T16:00:44.012Z] <<< [apiv2][body] GET https://firebase-public.firebaseio.com/cli.json {"cloudBuildErrorAfter":1594252800000,"cloudBuildWarnAfter":1590019200000,"defaultNode10After":1594252800000,"minVersion":"3.0.5","node8DeploysDisabledAfter":1613390400000,"node8RuntimeDisabledAfter":1615809600000,"node8WarnAfter":1600128000000}
+[debug] [2024-08-09T16:00:44.590Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/scream-game-a6327:testIamPermissions 200
+[debug] [2024-08-09T16:00:44.590Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/scream-game-a6327:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2024-08-09T16:00:44.591Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/scream-game-a6327 [none]
+[debug] [2024-08-09T16:00:45.773Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/scream-game-a6327 200
+[debug] [2024-08-09T16:00:45.773Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/scream-game-a6327 {"projectId":"scream-game-a6327","projectNumber":"1005683821233","displayName":"scream-game","name":"projects/scream-game-a6327","resources":{"hostingSite":"scream-game-a6327"},"state":"ACTIVE","etag":"1_c3071c64-5b59-4703-8585-8428d6d3642c"}
+[info] 
+[info] === Deploying to 'scream-game-a6327'...
+[info] 
+[info] i  deploying hosting 
+[debug] [2024-08-09T16:00:45.781Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/scream-game-a6327/versions [none]
+[debug] [2024-08-09T16:00:45.781Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/scream-game-a6327/versions {"status":"CREATED","labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2024-08-09T16:01:06.438Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/scream-game-a6327/versions 200
+[debug] [2024-08-09T16:01:06.438Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/scream-game-a6327/versions {"name":"projects/1005683821233/sites/scream-game-a6327/versions/d978f530654b52eb","status":"CREATED","config":{},"labels":{"deployment-tool":"cli-firebase"}}
+[info] i  hosting[scream-game-a6327]: beginning deploy... 
+[info] i  hosting[scream-game-a6327]: found 5 files in public 
+[debug] [2024-08-09T16:01:06.452Z] [hosting] uploading with 200 concurrency
+[debug] [2024-08-09T16:01:06.453Z] [hosting] hash cache [cHVibGlj] not populated
+[debug] [2024-08-09T16:01:06.479Z] [hosting] hash cache [cHVibGlj] stored for 5 files
+[debug] [2024-08-09T16:01:06.479Z] [hosting][hash queue][FINAL] {"max":17,"min":4,"avg":11,"active":0,"complete":5,"success":5,"errored":0,"retried":0,"total":5,"elapsed":23}
+[debug] [2024-08-09T16:01:06.480Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/1005683821233/sites/scream-game-a6327/versions/d978f530654b52eb:populateFiles [none]
+[debug] [2024-08-09T16:01:06.480Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/1005683821233/sites/scream-game-a6327/versions/d978f530654b52eb:populateFiles {"files":{"/js/app.js":"86e3ac6fe27c4fd7f2437c13366dd75412fda4e159ac2a9e960e99ffb038dcfc","/index.html":"15839c8f9f0e7a11032ac8ef6753902875db5d0e829bc95c8b5d52a70628683f","/css/app.css":"895190cf10454b34da16ba297bf0c0c975bce9b660570bfc64add9cec4c52764","/images/koi-logo-02.png":"27ae3114d27e13b1dcdfb2117876f56ca0aede592c17d408356ac06f525904f9","/images/koi-logo.png":"a51444a6761c739b8d0f7a9cc4800b03dfd2110638ff4833d91d417d6ae7e1f5"}}
+[debug] [2024-08-09T16:01:09.794Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/1005683821233/sites/scream-game-a6327/versions/d978f530654b52eb:populateFiles 200
+[debug] [2024-08-09T16:01:09.794Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/1005683821233/sites/scream-game-a6327/versions/d978f530654b52eb:populateFiles {"uploadRequiredHashes":["895190cf10454b34da16ba297bf0c0c975bce9b660570bfc64add9cec4c52764","86e3ac6fe27c4fd7f2437c13366dd75412fda4e159ac2a9e960e99ffb038dcfc","15839c8f9f0e7a11032ac8ef6753902875db5d0e829bc95c8b5d52a70628683f"],"uploadUrl":"https://upload-firebasehosting.googleapis.com/upload/sites/scream-game-a6327/versions/d978f530654b52eb/files"}
+[debug] [2024-08-09T16:01:09.796Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/scream-game-a6327/versions/d978f530654b52eb/files/895190cf10454b34da16ba297bf0c0c975bce9b660570bfc64add9cec4c52764 [none]
+[debug] [2024-08-09T16:01:09.796Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/scream-game-a6327/versions/d978f530654b52eb/files/895190cf10454b34da16ba297bf0c0c975bce9b660570bfc64add9cec4c52764 [stream]
+[debug] [2024-08-09T16:01:09.797Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/scream-game-a6327/versions/d978f530654b52eb/files/86e3ac6fe27c4fd7f2437c13366dd75412fda4e159ac2a9e960e99ffb038dcfc [none]
+[debug] [2024-08-09T16:01:09.797Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/scream-game-a6327/versions/d978f530654b52eb/files/86e3ac6fe27c4fd7f2437c13366dd75412fda4e159ac2a9e960e99ffb038dcfc [stream]
+[debug] [2024-08-09T16:01:09.802Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/scream-game-a6327/versions/d978f530654b52eb/files/15839c8f9f0e7a11032ac8ef6753902875db5d0e829bc95c8b5d52a70628683f [none]
+[debug] [2024-08-09T16:01:09.802Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/scream-game-a6327/versions/d978f530654b52eb/files/15839c8f9f0e7a11032ac8ef6753902875db5d0e829bc95c8b5d52a70628683f [stream]
+[debug] [2024-08-09T16:01:09.804Z] [hosting][populate queue][FINAL] {"max":3319,"min":3319,"avg":3319,"active":0,"complete":1,"success":1,"errored":0,"retried":0,"total":1,"elapsed":3327}
+[debug] [2024-08-09T16:01:09.804Z] [hosting] uploads queued: 3
+[debug] [2024-08-09T16:01:16.409Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/scream-game-a6327/versions/d978f530654b52eb/files/895190cf10454b34da16ba297bf0c0c975bce9b660570bfc64add9cec4c52764 200
+[debug] [2024-08-09T16:01:16.410Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/scream-game-a6327/versions/d978f530654b52eb/files/895190cf10454b34da16ba297bf0c0c975bce9b660570bfc64add9cec4c52764 [stream]
+[debug] [2024-08-09T16:01:16.473Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/scream-game-a6327/versions/d978f530654b52eb/files/86e3ac6fe27c4fd7f2437c13366dd75412fda4e159ac2a9e960e99ffb038dcfc 200
+[debug] [2024-08-09T16:01:16.473Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/scream-game-a6327/versions/d978f530654b52eb/files/86e3ac6fe27c4fd7f2437c13366dd75412fda4e159ac2a9e960e99ffb038dcfc [stream]
+[debug] [2024-08-09T16:01:16.717Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/scream-game-a6327/versions/d978f530654b52eb/files/15839c8f9f0e7a11032ac8ef6753902875db5d0e829bc95c8b5d52a70628683f 200
+[debug] [2024-08-09T16:01:16.717Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/scream-game-a6327/versions/d978f530654b52eb/files/15839c8f9f0e7a11032ac8ef6753902875db5d0e829bc95c8b5d52a70628683f [stream]
+[debug] [2024-08-09T16:01:16.718Z] [hosting][upload queue][FINAL] {"max":6923,"min":6615,"avg":6738.666666666667,"active":0,"complete":3,"success":3,"errored":0,"retried":0,"total":3,"elapsed":6923}
+[info] ✔  hosting[scream-game-a6327]: file upload complete 
+[debug] [2024-08-09T16:01:16.719Z] [hosting] deploy completed after 10278ms
+[debug] [2024-08-09T16:01:16.719Z] [
+  {
+    "config": {
+      "public": "public",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "rewrites": [
+        {
+          "source": "**",
+          "destination": "/index.html"
+        }
+      ],
+      "site": "scream-game-a6327"
+    },
+    "version": "projects/1005683821233/sites/scream-game-a6327/versions/d978f530654b52eb"
+  }
+]
+[info] i  hosting[scream-game-a6327]: finalizing version... 
+[debug] [2024-08-09T16:01:16.722Z] >>> [apiv2][query] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/scream-game-a6327/versions/d978f530654b52eb updateMask=status%2Cconfig
+[debug] [2024-08-09T16:01:16.722Z] >>> [apiv2][body] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/scream-game-a6327/versions/d978f530654b52eb {"status":"FINALIZED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]}}
+[debug] [2024-08-09T16:01:20.038Z] <<< [apiv2][status] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/scream-game-a6327/versions/d978f530654b52eb 200
+[debug] [2024-08-09T16:01:20.038Z] <<< [apiv2][body] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/scream-game-a6327/versions/d978f530654b52eb {"name":"projects/1005683821233/sites/scream-game-a6327/versions/d978f530654b52eb","status":"FINALIZED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2024-08-09T16:01:05.911205Z","createUser":{"email":"boraoudom2811@gmail.com"},"finalizeTime":"2024-08-09T16:01:19.879394Z","finalizeUser":{"email":"boraoudom2811@gmail.com"}}
+[debug] [2024-08-09T16:01:20.038Z] [hosting] finalized version for scream-game-a6327:[object Object]
+[info] ✔  hosting[scream-game-a6327]: version finalized 
+[info] i  hosting[scream-game-a6327]: releasing new version... 
+[debug] [2024-08-09T16:01:20.039Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/scream-game-a6327/channels/live/releases versionName=projects%2F1005683821233%2Fsites%2Fscream-game-a6327%2Fversions%2Fd978f530654b52eb
+[debug] [2024-08-09T16:01:20.039Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/scream-game-a6327/channels/live/releases {}
