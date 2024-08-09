@@ -8,7 +8,7 @@ const htmlmin = require('gulp-htmlmin');
 gulp.task('css', function () {
 	return gulp
 		.src('src/css/*.css')
-		.pipe(concat('app.css'))
+		.pipe(concat('style.css'))
 		.pipe(cssnano()) // Minify the CSS
 		.pipe(gulp.dest('public/css'));
 });
